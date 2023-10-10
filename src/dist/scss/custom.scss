@@ -1,0 +1,78 @@
+$primary: #198754;
+$secondary: #eec170;
+@import "../../../node_modules/bootstrap/scss/functions";
+$primary-100: tint-color($primary, 80%);
+$primary-200: tint-color($primary, 60%);
+$primary-300: tint-color($primary, 40%);
+$primary-400: tint-color($primary, 20%);
+$primary-500: $primary;
+$primary-600: shade-color($primary, 20%);
+$primary-700: shade-color($primary, 40%);
+$primary-800: shade-color($primary, 60%);
+$primary-900: shade-color($primary, 80%);
+$secondary-100: tint-color($secondary, 80%);
+$secondary-200: tint-color($secondary, 60%);
+$secondary-300: tint-color($secondary, 40%);
+$secondary-400: tint-color($secondary, 20%);
+$secondary-500: $secondary;
+$secondary-600: shade-color($secondary, 20%);
+$secondary-700: shade-color($secondary, 40%);
+$secondary-800: shade-color($secondary, 60%);
+$secondary-900: shade-color($secondary, 80%);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+a {
+  text-decoration: none !important;
+}
+body {
+  background-color: $primary-100;
+  color: $primary-900;
+}
+.pagination {
+  justify-content: center;
+  color: $primary;
+}
+.cocktail-section {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $secondary-800;
+  }
+  p {
+    color: $primary-800;
+  }
+}
+.toCarousel {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  top: 2rem;
+  right: 2rem;
+  background-color: $primary-200;
+  border-radius: 50%;
+
+  border: 2px solid $secondary-300;
+  animation: bo linear 3s infinite;
+  i {
+    color: $secondary-200;
+    font-size: 1.25rem;
+  }
+  @keyframes bo {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: scale(1.1) rotate(180deg);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
